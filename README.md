@@ -1,5 +1,6 @@
 # ViewU
 ViewU is an automated tool, that can enable user to have of view of him/her on the products he/she purchase like dresses, accessories, jewelry etc
+This is implemented using GANs
 
 # Dependency
 - ```pytorch >= 0.4.0```
@@ -8,7 +9,7 @@ ViewU is an automated tool, that can enable user to have of view of him/her on t
 
 # Training
 
-To train the model, we used LOOKBOOK dataset, resize images to 64*64. Prepare the dataset using `tool/prepare_data.py`.
+To train the model, we used LOOKBOOK dataset, resize images to 64*64. Prepare the dataset using `pytorch-GAN/tool/prepare_data.py`.
 Then goto src dir and run
 ```
 python3 train.py
