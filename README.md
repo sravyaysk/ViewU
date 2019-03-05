@@ -20,3 +20,6 @@ python3 train.py
 - Install [visdom](https://github.com/facebookresearch/visdom).
 - Start the visdom server with ```python3 -m visdom.server 5274```
 - Open this URL in your browser: `http://localhost:5274` You will see the loss curve as well as the image examples.
+
+
+- Development in Progress
