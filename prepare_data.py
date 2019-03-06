@@ -34,5 +34,5 @@ while((i <= nclothes) and (j <= nmodels)):
         k = k + 1
     i = i + 1
 
-torch.save('cloth_table.t7', clothes)
-torch.save('models_table.t7', match)
+#torch.save('cloth_table.t7', clothes)
+#torch.save('models_table.t7', match)

@@ -6,6 +6,7 @@ import numpy as np
 
 def loadImage(path):
     inImage_ = cv2.imread(path)
+    inImage_ = np.array(inImage_, dtype=np.uint8)
     inImage = cv2.cvtColor(inImage_, cv2.COLOR_RGB2BGR)
     info = np.iinfo(inImage.dtype)
     inImage = inImage.astype(np.float) / info.max

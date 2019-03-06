@@ -13,7 +13,9 @@ for filename in os.listdir(dataset_dir):
         else:
             clothes.append(filename)
 
+print(models[0:10])
 print(len(models))
+print(clothes[0:10])
 print(len(clothes))
 
 i = 0
@@ -33,5 +35,7 @@ with open('cloth_table.pkl', 'wb') as cloth_table:
     Pickle.dump(clothes, cloth_table)
 with open('model_table.pkl', 'wb') as model_table:
     Pickle.dump(match, model_table)
+
+print(match[0:10])
 
 print('done')

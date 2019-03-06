@@ -6,8 +6,8 @@ import itertools
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.nn.init as init
-from model import NetG, NetD, NetA
-from data_set import LookbookDataset
+from gan.src.model import NetG, NetD, NetA
+from gan.src.data_set import LookbookDataset
 import torch.optim as optim
 import visdom
 from torchvision.utils import make_grid
@@ -21,7 +21,8 @@ neta = NetA()
 netg.train()
 netd.train()
 neta.train()
-device = th.device("cuda:2")
+#device = th.device("cuda:2")
+device = th.device("cpu")
 
 # weights init
 all_mods = itertools.chain()
@@ -41,8 +42,8 @@ netg = netg.to(device)
 netd = netd.to(device)
 neta = neta.to(device)
 
-dataset = LookbookDataset(data_dir='../data/lookbook/data/',
-                          index_dir='../tool/')
+dataset = LookbookDataset(data_dir='E:/work/ML/infinity/lookbook/data/',
+                          index_dir='E:/work/ML/infinity/ViewU/gan/tool/')
 
 iteration = 0
 lr = 0.0002
